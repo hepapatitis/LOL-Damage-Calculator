@@ -1,0 +1,7 @@
+html,body { background:url('../images/debut_dark.png'); color:#bbb; }
+
+h1,h2,h3,h4,h5,h6 { font-family: 'Open Sans', sans-serif; letter-spacing:-2px; color:#f0f0f0; }
+
+hr { border-top:1px solid #161616; border-bottom:1px solid #4f4f4f; }
+.main-wrapper { padding:20px 30px; }
+.plain { color:#fff; text-shadow:1px 1px 4px rgba(0,0,0,0.9); }
