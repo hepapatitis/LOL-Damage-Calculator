@@ -964,7 +964,7 @@ function precise_round(num,decimals){
 }
 
 function toPercentage(num,decimals) {
-	return precise_round(num*100,decimals) + "%";
+	return precise_round(num*100,decimals);
 }
 
 // Start

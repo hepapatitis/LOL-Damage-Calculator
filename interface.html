@@ -18,167 +18,223 @@
 		<div class="col-md-4">
 			<!-- Start -->
 			<h2 class="plain">Your Champion</h2>
-			<form class="form-horizontal" role="form">
+			<div class="form-horizontal" role="form">
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-6 control-label">AD (Physical Damage)</label>
+					<label for="champ_ad" class="col-sm-6 control-label">AD (Physical Damage)</label>
 					<div class="col-sm-6">
-						<input type="email" class="form-control" id="inputEmail3" placeholder="0">
+						<input type="text" class="form-control" id="champ_ad" value="0" onkeyup="refresh()">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputPassword3" class="col-sm-6 control-label">AP (Magic Damage)</label>
+					<label for="champ_ap" class="col-sm-6 control-label">AP (Magic Damage)</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="inputPassword3" placeholder="0">
+						<input type="text" class="form-control" id="champ_ap" value="0" onkeyup="refresh()">
 					</div>
 				</div>
 				<hr />
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-6 control-label">Armor Penetration Flat</label>
+					<label for="champ_armor_pen_flat" class="col-sm-6 control-label">Armor Penetration Flat</label>
 					<div class="col-sm-6">
-						<input type="email" class="form-control" id="inputEmail3" placeholder="0">
+						<input type="text" class="form-control" id="champ_armor_pen_flat" value="0" onkeyup="refresh()">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-6 control-label">Armor Penetration Percentage</label>
+					<label for="champ_armor_pen_percentage" class="col-sm-6 control-label">Armor Penetration Percentage</label>
 					<div class="col-sm-6">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="0">
+							<input type="text" class="form-control" id="champ_armor_pen_percentage" value="0" onkeyup="refresh()">
 							<span class="input-group-addon">%</span>
 						</div>
 						<p class="help-block">Maximum: 40%</p>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-6 control-label">Magic Penetration Flat</label>
+					<label for="champ_armor_reduc_flat" class="col-sm-6 control-label">Armor Reduction Flat</label>
 					<div class="col-sm-6">
-						<input type="email" class="form-control" id="inputEmail3" placeholder="0">
+						<input type="text" class="form-control" id="champ_armor_reduc_flat" value="0" onkeyup="refresh()">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-6 control-label">Magic Penetration Percentage</label>
+					<label for="champ_armor_reduc_percentage" class="col-sm-6 control-label">Armor Reduction Percentage</label>
 					<div class="col-sm-6">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="0">
+							<input type="text" class="form-control" id="champ_armor_reduc_percentage" value="0" onkeyup="refresh()">
+							<span class="input-group-addon">%</span>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="form-group">
+					<label for="champ_magic_pen_flat" class="col-sm-6 control-label">Magic Penetration Flat</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="champ_magic_pen_flat" value="0" onkeyup="refresh()">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="champ_magic_pen_percentage" class="col-sm-6 control-label">Magic Penetration Percentage</label>
+					<div class="col-sm-6">
+						<div class="input-group">
+							<input type="text" class="form-control" id="champ_magic_pen_percentage" value="0" onkeyup="refresh()">
 							<span class="input-group-addon">%</span>
 						</div>
 						<p class="help-block">Maximum: 40%</p>
 					</div>
 				</div>
+				<div class="form-group">
+					<label for="champ_magic_reduc_flat" class="col-sm-6 control-label">Magic Reduction Flat</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="champ_magic_reduc_flat" value="0" onkeyup="refresh()">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="champ_magic_reduc_percentage" class="col-sm-6 control-label">Magic Reduction Percentage</label>
+					<div class="col-sm-6">
+						<div class="input-group">
+							<input type="text" class="form-control" id="champ_magic_reduc_percentage" value="0" onkeyup="refresh()">
+							<span class="input-group-addon">%</span>
+						</div>
+					</div>
+				</div>
 				<hr />
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-6 control-label">Lifesteal</label>
+					<label for="champ_lifesteal" class="col-sm-6 control-label">Lifesteal</label>
 					<div class="col-sm-6">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="0">
+							<input type="text" class="form-control" id="champ_lifesteal" value="0" onkeyup="refresh()">
 							<span class="input-group-addon">%</span>
 						</div>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-6 control-label">Spell Vamp</label>
+					<label for="champ_spellvamp" class="col-sm-6 control-label">Spell Vamp</label>
 					<div class="col-sm-6">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="0">
+							<input type="text" class="form-control" id="champ_spellvamp" value="0" onkeyup="refresh()">
 							<span class="input-group-addon">%</span>
 						</div>
 					</div>
 				</div>
-			</form>
+			</div>
 			<!-- End -->
 		</div>
 		<div class="col-md-8">
 			<!-- Start -->
-			<h2 class="plain">Your Enemies</h2>
 			<div class="row">
 				<div class="col-md-6">
-					<form class="form-horizontal" role="form">
+					<h2 class="plain">Enemy #1</h2>
+					<div class="form-horizontal" role="form">
 						<div class="form-group">
-							<label for="inputEmail3" class="col-sm-6 control-label">Armor</label>
+							<label for="e1_armor" class="col-sm-6 control-label">Armor</label>
 							<div class="col-sm-6">
-								<input type="email" class="form-control" id="inputEmail3" placeholder="0">
+								<input type="text" class="form-control" id="e1_armor" value="0" onkeyup="refresh()">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputPassword3" class="col-sm-6 control-label">Magic Resist</label>
+							<label for="e1_mr" class="col-sm-6 control-label">Magic Resist</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" id="inputPassword3" placeholder="0">
+								<input type="text" class="form-control" id="e1_mr" value="0" onkeyup="refresh()">
+							</div>
+						</div>
+					</div>
+					<hr />
+					<h3 class="plain">Output</h3>
+					<div class="form-horizontal" role="form">
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Final Armor</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e1_final_armor">0</span> &nbsp; (<span id="e1_ad_reduc">0</span>%)</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Physical Damage Dealt</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e1_ad_dealt">0</span></p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Final Magic Resist</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e1_final_mr">0</span> &nbsp; (<span id="e1_ap_reduc">0</span>%)</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Magic Damage Dealt</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e1_ap_dealt">0</span></p>
 							</div>
 						</div>
 						<hr />
-						<h3 class="plain">Output</h3>
-						<form class="form-horizontal" role="form">
-							<div class="form-group">
-								<label class="col-sm-6 control-label">Physical Damage Dealt</label>
-								<div class="col-sm-6">
-									<p class="form-control-static"><span id="">0</span> &nbsp; (<span id="">0</span>%)</p>
-								</div>
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Lifesteal Amount</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e1_lifesteal_gained">0</span></p>
 							</div>
-							<div class="form-group">
-								<label class="col-sm-6 control-label">Magic Damage Dealt</label>
-								<div class="col-sm-6">
-									<p class="form-control-static"><span id="">0</span> &nbsp; (<span id="">0</span>%)</p>
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Spellvamp Amount</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e1_spellvamp_gained">0</span></p>
 							</div>
-							<hr />
-							<div class="form-group">
-								<label class="col-sm-6 control-label">Lifesteal Amount</label>
-								<div class="col-sm-6">
-									<p class="form-control-static"><span id="">0</span></p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-6 control-label">Spellvamp Amount</label>
-								<div class="col-sm-6">
-									<p class="form-control-static"><span id="">0</span></p>
-								</div>
-							</div>
-						</form>
-					</form>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-6">
-					<form class="form-horizontal" role="form">
+					<h2 class="plain">Enemy #2</h2>
+					<div class="form-horizontal" role="form">
 						<div class="form-group">
-							<label for="inputEmail3" class="col-sm-6 control-label">Armor</label>
+							<label for="e2_armor" class="col-sm-6 control-label">Armor</label>
 							<div class="col-sm-6">
-								<input type="email" class="form-control" id="inputEmail3" placeholder="0">
+								<input type="text" class="form-control" id="e2_armor" value="0" onkeyup="refresh()">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputPassword3" class="col-sm-6 control-label">Magic Resist</label>
+							<label for="e2_mr" class="col-sm-6 control-label">Magic Resist</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" id="inputPassword3" placeholder="0">
+								<input type="text" class="form-control" id="e2_mr" value="0" onkeyup="refresh()">
+							</div>
+						</div>
+					</div>
+					<hr />
+					<h3 class="plain">Output</h3>
+					<div class="form-horizontal" role="form">
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Final Armor</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e2_final_armor">0</span> &nbsp; (<span id="e2_ad_reduc">0</span>%)</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Physical Damage Dealt</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e2_ad_dealt">0</span></p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Final Magic Resist</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e2_final_mr">0</span> &nbsp; (<span id="e2_ap_reduc">0</span>%)</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Magic Damage Dealt</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e2_ap_dealt">0</span></p>
 							</div>
 						</div>
 						<hr />
-						<h3 class="plain">Output</h3>
-						<form class="form-horizontal" role="form">
-							<div class="form-group">
-								<label class="col-sm-6 control-label">Physical Damage Dealt</label>
-								<div class="col-sm-6">
-									<p class="form-control-static"><span id="">0</span> &nbsp; (<span id="">0</span>%)</p>
-								</div>
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Lifesteal Amount</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e2_lifesteal_gained">0</span></p>
 							</div>
-							<div class="form-group">
-								<label class="col-sm-6 control-label">Magic Damage Dealt</label>
-								<div class="col-sm-6">
-									<p class="form-control-static"><span id="">0</span> &nbsp; (<span id="">0</span>%)</p>
-								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-6 control-label">Spellvamp Amount</label>
+							<div class="col-sm-6">
+								<p class="form-control-static"><span id="e2_spellvamp_gained">0</span></p>
 							</div>
-							<hr />
-							<div class="form-group">
-								<label class="col-sm-6 control-label">Lifesteal Amount</label>
-								<div class="col-sm-6">
-									<p class="form-control-static"><span id="">0</span></p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-6 control-label">Spellvamp Amount</label>
-								<div class="col-sm-6">
-									<p class="form-control-static"><span id="">0</span></p>
-								</div>
-							</div>
-						</form>
-					</form>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- End -->
@@ -187,7 +243,100 @@
 </div>
 
 <script>
+$(function() {
+	refresh();
+});
+
+function refresh()
+{
+	calc_damage("e1");
+	calc_damage("e2");
+}
+
+function calc_damage(id)
+{
+	var ad 		= parseInt($("#champ_ad").val());
+	var ap 		= parseInt($("#champ_ap").val());
+	var armor_pen_flat 			= parseInt($("#champ_armor_pen_flat").val());
+	var armor_pen_percentage 	= parseInt($("#champ_armor_pen_percentage").val());
+	var magic_pen_flat 			= parseInt($("#champ_magic_pen_flat").val());
+	var magic_pen_percentage 	= parseInt($("#champ_magic_pen_percentage").val());
+	var armor_reduc_flat 		= parseInt($("#champ_armor_reduc_flat").val());
+	var armor_reduc_percentage 	= parseInt($("#champ_armor_reduc_percentage").val());
+	var magic_reduc_flat 		= parseInt($("#champ_magic_reduc_flat").val());
+	var magic_reduc_percentage 	= parseInt($("#champ_magic_reduc_percentage").val());
+	var lifesteal 	= parseInt($("#champ_lifesteal").val());
+	var spellvamp 	= parseInt($("#champ_spellvamp").val());
+	var armor 	= parseInt($("#" + id + "_armor").val());
+	var mr 		= parseInt($("#" + id + "_mr").val());
+	var bs_ad_taken, bs_ap_taken;
 	
+	// If magic_pen & armor_pen percent is more than 40%, put it back to 40%
+	if(magic_pen_percentage > 40)
+	{
+		magic_pen_percentage = 40;
+		$("#champ_magic_pen_percentage").val(40);
+	}
+	
+	if(armor_pen_percentage > 40)
+	{
+		armor_pen_percentage = 40;
+		$("#champ_armor_pen_percentage").val(40);
+	}
+	
+	final_armor = calculate_final_def(armor, armor_reduc_flat, armor_reduc_percentage, armor_pen_flat, armor_pen_percentage);
+	bs_ad_taken = calculate_damage_taken_portion(final_armor);
+	final_mr 	= calculate_final_def(mr, magic_reduc_flat, magic_reduc_percentage, magic_pen_flat, magic_pen_percentage);
+	bs_ap_taken = calculate_damage_taken_portion(final_mr);
+	e_ad_dealt = ad * bs_ad_taken;
+	e_ap_dealt = ap * bs_ap_taken;
+	e_lifesteal = e_ad_dealt * lifesteal/100;
+	e_spellvamp = e_ap_dealt * spellvamp/100;
+	
+	// Output
+	$("#" + id + "_ad_reduc").text(toPercentage(bs_ad_taken,2));
+	$("#" + id + "_ap_reduc").text(toPercentage(bs_ap_taken,2));
+	$("#" + id + "_final_armor").text(precise_round(final_armor,0));
+	$("#" + id + "_final_mr").text(precise_round(final_mr,0));
+	$("#" + id + "_ad_dealt").text(precise_round(e_ad_dealt,0));
+	$("#" + id + "_ap_dealt").text(precise_round(e_ap_dealt,0));
+	$("#" + id + "_lifesteal_gained").text(precise_round(e_lifesteal,0));
+	$("#" + id + "_spellvamp_gained").text(precise_round(e_spellvamp,0));
+}
+
+function calculate_final_def(def, flat_reduc, percentage_reduc, flat_pen, percentage_pen)
+{
+	var current_def;
+
+	// Flat Reduction
+	current_def = (def - flat_reduc);
+	
+	if(current_def <= 0)
+	{
+		return current_def;
+	}
+	else
+	{
+		// Percent Reduction
+		current_def = current_def * (1-(percentage_reduc/100));
+		
+		// Penetration
+		current_def = (current_def * (1-(percentage_pen/100))) - flat_pen;
+		
+		if(current_def < 0)
+			current_def = 0;
+			
+		return current_def;
+	}
+}
+
+function calculate_damage_taken_portion(current_def)
+{
+	if(current_def < 0)
+		return 2 - 100 / (100 - current_def);
+	else
+		return 100 / (100 + current_def);
+}
 </script>
 </body>
 </html>
